@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas tarefas</title>
+  <link rel="stylesheet" href="assets/Pagina.css">
+  <script src="assets/Pagina.js" defer></script>
+</head>
+<body>
+  <main class="gerenciador">
+    <h1>Minhas tarefas</h1>
+
+    <form id="formulario-tarefa" class="card">
+      <label for="texto-tarefa">Nova tarefa</label>
+      <div class="campo-adicionar">
+        <input id="texto-tarefa" type="text" placeholder="Digite uma tarefa" maxlength="200" required>
+        <button type="submit">Adicionar</button>
+      </div>
+    </form>
+
+    <ul id="lista-tarefas" class="card lista-tarefas" aria-label="Lista de tarefas"></ul>
+  </main>
+
+  <template id="modelo-tarefa">
+    <li class="tarefa">
+      <label>
+        <input type="checkbox" class="checkbox-tarefa">
+        <span class="texto-tarefa"></span>
+      </label>
+      <button type="button" class="botao-excluir">Remover</button>
+    </li>
+  </template>
+</body>
+</html>

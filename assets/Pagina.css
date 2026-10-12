@@ -1,0 +1,131 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  background: #f0f2f1;
+  color: #24352d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gerenciador {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 30px;
+}
+
+.card {
+  margin: 0 0 20px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.campo-adicionar {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5ce;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #20583c;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16432c;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #6aaa82;
+  outline-offset: 3px;
+}
+
+.lista-tarefas {
+  list-style: none;
+}
+
+.lista-tarefas:empty {
+  display: none;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8ede9;
+}
+
+.tarefa:last-child {
+  border-bottom: 0;
+}
+
+.tarefa label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-tarefa {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #20583c;
+  cursor: pointer;
+}
+
+.texto-tarefa {
+  overflow-wrap: anywhere;
+}
+
+/* Risca a tarefa quando o checkbox estiver marcado. */
+.checkbox-tarefa:checked + .texto-tarefa {
+  text-decoration: line-through;
+  color: #758179;
+}
+
+.botao-excluir {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+
+  .campo-adicionar {
+    flex-direction: column;
+  }
+}
